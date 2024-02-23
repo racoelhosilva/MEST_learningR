@@ -16,3 +16,19 @@ Most of the time, the data for a given program will be loaded from a dataset fil
 | Matrix | mat <- matrix(1:6, nrow = 2, ncol = 3) | 2D collection of variables of the same type
 | Data Frame | df <- data.frame(a = c("b", "c"), b = c(1, 2)) | Table-like (2D) structure of variables with multiple types
 
+## Basic Functions
+
+There are, of course, a lot of functions and data analysis that can be done with R. However, to start off there a few important functions that can be very useful to quickly get an overview of the dataset.
+
+``` R
+head(<dataset>, <optional_num>) # Return the first entries of the dataset
+tail(<dataset>, <optional_num>) # Return the last entries of the dataset
+# Adding a number specifies how many entries to show
+
+summary(<dataset>) # Some quick common operations on datasets
+```
+
+## Help Function
+
+An even more important function that can be very useful is the help function for a command. It opens the documentation for that function and can be very useful to learn more about specific things of some commands.  
+In order to load the help for some command, just type ```?command``` and a window should open with some information about it
