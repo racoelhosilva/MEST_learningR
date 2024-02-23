@@ -1,4 +1,11 @@
-# R Basics
+<h1 align="center"> R Basics </h1>
+
+<h2>Table of Contents </h2>
+
+- [Data and Datatypes](#data-and-datatypes)
+- [Basic Functions](#basic-functions)
+- [Help Function](#help-function)
+- [Including Libraries](#including-libraries)
 
 ## Data and Datatypes
 Most of the time, the data for a given program will be loaded from a dataset file, but, in order to get started and learn some functions, it's probably better to learn how to do this manually.  
@@ -34,7 +41,7 @@ An even more important function that can be very useful is the help function for
 In order to load the help for some command, just type ```?command``` and a window should open with some information about it
 
 
-### Including Libraries
+## Including Libraries
 By default, there a multitude of packages that come pre-installed with R. In order to get a full list of them you can use the command ```installed.packages()``` inside a R terminal session.
 
 ```R
