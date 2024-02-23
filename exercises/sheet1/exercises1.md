@@ -68,3 +68,21 @@
 ## Exercise 5
 
 A distribuição é enviesada à direita
+
+## Exercise 7
+
+A existência de dois picos no primeiro gráfico dá um aspeto bimodal, o que poderá sugerir que estamos na presença de um misto de dois tipos distintos
+Ao alterar a distribuição das classes, o aspeto do gráfico altera-se e podemos considerar estar apenas na presença de uma espécie
+
+## Exercise 8
+
+- Dimensão da amostra: 39 + 19 + 25 + 30 + 19 + 7 + 9 = 148
+- Comprimento superior ou igual a 15cm: 7 + 9 = 16
+- Percentagem com comprimento inferior a 13.5cm: (39+19+25+15) / 148 ~= 66%
+- Em frequência relativa, basta dividir a escala das ordenadas por 148
+- Em densidade, basta dividir a escala das ordenadas (já em frequência relativa) por 10 (amplitude das classes)
+
+## Exercise 10
+
+- Média: 37,3
+- Desvio Padrão: 12,9
