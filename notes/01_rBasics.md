@@ -32,3 +32,13 @@ summary(<dataset>) # Some quick common operations on datasets
 
 An even more important function that can be very useful is the help function for a command. It opens the documentation for that function and can be very useful to learn more about specific things of some commands.  
 In order to load the help for some command, just type ```?command``` and a window should open with some information about it
+
+
+### Including Libraries
+By default, there a multitude of packages that come pre-installed with R. In order to get a full list of them you can use the command ```installed.packages()``` inside a R terminal session.
+
+```R
+library(<name_of_library>)
+```
+
+> **Tip:** Some of the following functions are better understood and seen with hands-on experience. For this, you can use datasets included in the ```datasets```that can be loaded and used. Some of the contained datasets are called 'iris', 'rivers', 'trees' and many more that can be found in the library description
