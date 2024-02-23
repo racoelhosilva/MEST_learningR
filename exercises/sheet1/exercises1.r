@@ -43,3 +43,20 @@ ex9 <- function(x = file) {
     cat("Mean:", mean(data), "\n")
     cat("Standard Deviation:", sd(data), "\n")
 }
+
+ex11 <- function(x = file) {
+    data <- na.omit(x$Ex11)
+    barplot(table(data), main="Tamanho da ninhada de porcas", xlab="Tamanho", ylab="Contagem", col="#689d6a")
+    cat("Mean:", mean(data), "\n")
+    cat("Median:", median(data), "\n")
+    cat("Standard Deviation:", sd(data), "\n")
+    # Note: mode is not here since there's no standard function
+}
+
+ex12 <- function(x = file) {
+    data <- na.omit(x$Ex12)
+    hist(data, main="Altura do caule das plantas numa estufa", xlab="Altura", ylab="Frequência", col="#689d6a")
+    cat("Mean:", mean(data), "\n")
+    cat("Variance:", var(data), "\n")
+    cat("Standard Deviation:", sd(data), "\n")
+}
