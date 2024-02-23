@@ -63,3 +63,8 @@
 #### Tipo de Dados
 - Número de folhas: Dado Quantitativo Discreto
 - Tipo de plantas: Dado Qualitativo Categórico
+
+
+## Exercise 5
+
+A distribuição é enviesada à direita
