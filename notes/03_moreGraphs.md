@@ -8,6 +8,8 @@
 - [Histograms](#histograms)
   - [Sturges Method](#sturges-method)
 - [Box and Whiskers Plots](#box-and-whiskers-plots)
+  - [Multiple Box and Whiskers Plots](#multiple-box-and-whiskers-plots)
+- [Scatter Plots](#scatter-plots)
 
 
 ## Dot Plot
@@ -107,3 +109,28 @@ boxplot(
 ```
 One parameter that is often useful however is the ```horizontal``` flag that can be either TRUE or FALSE and represents whether the ending result should be displayed horizontally or not.
 
+### Multiple Box and Whiskers Plots
+
+Sometimes, the data we are working with can be divided into different groups but should be analized quickly and in an uniform manner. A good way to do this is to represent different groups in the same graph using a box and whiskers plot.  
+To do this, we just need to pass the groups separately into the boxplot function and specify the labels for each of the graphs using the parameter ```names=c(..., ...)``` with the labels for each of the groups
+```R
+boxplot(
+  data1,
+  data2,
+  names=c("Dataset 1", "Dataset 2"),
+  ...
+)
+```
+
+## Scatter Plots
+
+As you might've seen from using the general plot function, the output that R generates is usually different from any of these graphs. That's because the default plot in R is the **scatterplot** which represents values (usually pairs of values) in an xy plane where each pair as an associated position of (value1, value2).  
+For datasets with larger tuples of data, the plot function can also automatically generate different scatterplots for each combination of values.
+
+
+``` R
+plot(
+  data,
+  ...
+)
+```

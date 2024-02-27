@@ -29,6 +29,8 @@ The ```plot()``` function is the general plot function and its output is adapted
 - When called with one dataset variable, it will plot the dataset using that variable and another different one (usually the index)
 - When called with two dataset variables, it will create the most appropriate plot for that situation
 
+Usually, this function will plot the dataset using a scatterplot (more information about this in the next topic).
+
 ### Parameters
 
 Besides the data itself, there are other parameters that can be specified to change the resulting graph display. Note that these work like keyword-arguments and must be passed as ```function(..., keyword=parameter,...)```.  
