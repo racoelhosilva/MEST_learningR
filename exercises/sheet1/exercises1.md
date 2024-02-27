@@ -86,3 +86,14 @@ Ao alterar a distribuição das classes, o aspeto do gráfico altera-se e podemo
 
 - Média: 37,3
 - Desvio Padrão: 12,9
+
+## Exercise 14
+
+- D
+
+## Exercise 16
+
+- A : 0.1
+- B : 0.77
+- C : -0.99
+- D : -0.6

@@ -83,3 +83,28 @@ ex12 <- function(x = file) {
     cat("Variance:", var(data), "\n")
     cat("Standard Deviation:", sd(data), "\n")
 }
+
+ex13 <- function(x = file) {
+    dataBefore <- na.omit(x$Ex13Antes)
+    dataAfter <- na.omit(x$Ex13Depois)
+
+    par(mfrow=c(2,1))
+    boxplot(dataBefore, dataAfter, names=c("Antes", "Depois"), main="Tensão sistólica antes e depois do tratamento", xlab="Tensão", ylab="Distribuição", col="#689d6a", horizontal=TRUE)
+    plot(dataBefore, dataAfter, main="Tensão sistólica antes e depois do tratamento", xlab="Tensão Antes", ylab="Tensão Depois", col="#689d6a", pch=19)
+    par(mfrow=c(1,1))
+
+    cat("Correlation Coefficient:", cor(dataBefore, dataAfter), "\n")
+}
+
+ex15 <- function(x = file) {
+    dataX <- na.omit(x$Ex15x)
+    dataY <- na.omit(x$Ex15y)
+    plot(dataX, dataY, main="Diagrama de dispersão", xlab="x", ylab="y", col="#689d6a", pch=19)
+    cat("Correlation Coefficient:", cor(dataX, dataY), "\n")
+}
+
+ex17 <- function(x = file) {
+    dataA <- na.omit(x$Ex17A)
+    dataB <- na.omit(x$Ex17B)
+    boxplot(dataA, dataB, names=c("A", "B"), main="Peso dos animais de dois grupos submetidos a diferentes dietas", xlab="Peso, em gramas", ylab="Distribuição", col="#689d6a", horizontal=TRUE)
+}
