@@ -14,6 +14,9 @@
     - [Standard Deviation](#standard-deviation)
     - [Variance](#variance)
     - [Coefficient of Variation (CV)](#coefficient-of-variation-cv)
+- [Bivariate Data](#bivariate-data)
+    - [Categorical Bivariate](#categorical-bivariate)
+    - [Quantitative Bivariate](#quantitative-bivariate)
 - [Final Notes](#final-notes)
 
 
@@ -119,6 +122,38 @@ In R, we can only obtain it manually using the ratio, since there is no standard
 
 ```R
 cat("Coefficient of Variation:", sd(data)/mean(data), "\n")
+```
+
+## Bivariate Data
+
+Bivariate Datasets are datasets where we have pairs (or larger sets) of values instead of single values. The data itself can fall under many other categories and classifications, but the most common are categorical data and quantitative data.
+
+#### Categorical Bivariate
+
+In categorical bivariate datasets we are usually working with pairs of categorical values and want to analize it using a double-entry table of frequencies (can be absolute frequencies but for analysis we work with relative).  
+The graph we then use is a bar graph which allows us to quickly compare the different heights/frequencies of each pair of occurrences.  
+In R, we can achieve this by first creating a matrix, converting it into a table and then doint a barplot of the table.
+
+```R
+M <- matrix(...) # Creating the matrix
+dimnames(M) <- list(data1=c(...), data2=c(...)) # Optional step to set the names of the variables of the matrix
+T <- as.table(M) # Converting into table
+barplot(M)
+barplot(t(M)) # Tranpose of the table
+```
+
+#### Quantitative Bivariate
+
+In quantitative bivariate datasets we work with pairs of quantitative values and analize those with scatter plots. Given a scatterplot it's usually useful to know about some of the variables associated:
+- Covariance: given by the sumation((x-mean(x))(y-mean(y))) / (len(x) - 1), it's useful to analize the variance with respect to multiple variables
+- Correlation Coefficient: we are working specifically about the linear correlation coefficient of Pearson which is given by the quotient of the covariance and the product of the standard deviation of each variable
+     
+In R, these are defined by the functions ```cov()``` and ```cor()```.  
+Note that we must pass the x and y values separately to get the correct result.
+
+```R
+cat("Covariance:", cov(data1, data2,...), "\n")
+cat("Coefficient of Correlation:", cor(data1, data2,...), "\n")
 ```
 
 ## Final Notes
