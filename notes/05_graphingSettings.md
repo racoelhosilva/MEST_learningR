@@ -5,6 +5,7 @@
 - [Introduction](#introduction)
 - [Multiple Graphs in the Same File](#multiple-graphs-in-the-same-file)
 - [Changing Color Scheme and Fonts](#changing-color-scheme-and-fonts)
+- [Changing the Plot Characters in Graphs](#changing-the-plot-characters-in-graphs)
 
 
 
@@ -32,12 +33,32 @@ There a few parameters that need to be changed, but the good thing is that the c
 The following example is the one I use to change to a Gruvbox theme with JetBrainsMono as the font.
 
 ```R
-par(bg = "#282828", # Background color
-    col="#ebdbb2", # Main color
-    col.axis="#ebdbb2", # Axis colors
-    col.lab="#ebdbb2", # Label colors
-    col.main="#ebdbb2", # Main title colors
-    fg="#ebdbb2", # Foreground color
-    family="JetBrainsMono Nerd Font" # Text font
+par(bg = "#282828",         # Background color
+    col="#ebdbb2",          # Main color
+    col.axis="#ebdbb2",     # Axis colors
+    col.lab="#ebdbb2",      # Label colors
+    col.main="#ebdbb2",     # Main title colors
+    fg="#ebdbb2",           # Foreground color
+    family="JetBrainsMono"  # Text font
     )
 ```
+
+Note: this change is different from the parameter ```color``` passed to most of the plots. These changes are relative to the output image and the parameter is the color used for marking values, dots, bars... in the graphs
+
+## Changing the Plot Characters in Graphs
+
+In some graphs where there are certains markings or plot characters we can use a parameter passed to the plot to force the use of a different symbol.  
+The parameter is ```pch=``` and it can take multiple values as specified in the following image: 
+
+<p align="center">
+<img src="https://www.statmethods.net/images/points.png" alt="Possible values and representations for pch">
+</p>
+
+```R
+plot(
+    ...
+    pch=19
+)
+```
+
+Note: this same parameter can also be passed to the par function to make it the default plot character for the session (although I believe it can be overwritten if passed as a function parameter to the plot functions)
