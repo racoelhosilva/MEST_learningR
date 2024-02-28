@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)
 - [Multiple Graphs in the Same File](#multiple-graphs-in-the-same-file)
+- [Changing Color Scheme and Fonts](#changing-color-scheme-and-fonts)
 
 
 
@@ -23,3 +24,20 @@ par(mfrow=c(2,2)) # 2 rows and 2 columns (square)
 ```
 
 Note: this change is fixed unless we revert it so it's a good practice to always revert it after plotting the necessary graphs with ```par(mfrow=c(1,1))```.
+
+## Changing Color Scheme and Fonts
+
+A cool trick that can also be done is changing the output graphics (especially to match user-defined themes). This, can also be done with the ```par()``` function but with different flags. Like before, if it is not reverted, the settings will remain through the entire session (but this is usually what we want so no big problems).  
+There a few parameters that need to be changed, but the good thing is that the command can then be copied to other files to get the same results (the theme loads everywhere).  
+The following example is the one I use to change to a Gruvbox theme with JetBrainsMono as the font.
+
+```R
+par(bg = "#282828", # Background color
+    col="#ebdbb2", # Main color
+    col.axis="#ebdbb2", # Axis colors
+    col.lab="#ebdbb2", # Label colors
+    col.main="#ebdbb2", # Main title colors
+    fg="#ebdbb2", # Foreground color
+    family="JetBrainsMono Nerd Font" # Text font
+    )
+```
